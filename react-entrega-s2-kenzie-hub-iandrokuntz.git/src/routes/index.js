@@ -7,7 +7,7 @@ import Home from "../pages/Home";
 
 const Routes = () => {
 
-    const [userData, setUserdata] = useState(() => JSON.parse(localStorage.getItem("@KenzieHub:user")) || "")
+    const [userData] = useState(() => JSON.parse(localStorage.getItem("@KenzieHub:user")) || "")
     const [auth, setAuth] = useState(false)
 
   useEffect(() => {const token = JSON.parse(localStorage.getItem("@KenzieHub:token"))
@@ -27,7 +27,7 @@ const Routes = () => {
         <FormRegister auth={auth}/>
       </Route>
       <Route path="/login">
-        <FormLogin auth={auth} setAuth={setAuth} setUserdata={setUserdata}/>
+        <FormLogin auth={auth} setAuth={setAuth}/>
       </Route>
       <Route path="/dashboard">
         <Dashboard auth={auth} setAuth={setAuth} userData={userData}/>

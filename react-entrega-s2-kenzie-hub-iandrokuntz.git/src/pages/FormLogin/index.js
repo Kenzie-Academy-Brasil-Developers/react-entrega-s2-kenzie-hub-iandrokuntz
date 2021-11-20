@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { useEffect } from "react";
 import "./style.css"
 
-const FormLogin = ({ auth, setAuth, setUserData }) => {
+const FormLogin = ({ auth, setAuth}) => {
     
   const history = useHistory()
   
